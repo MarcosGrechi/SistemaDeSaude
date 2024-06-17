@@ -15,7 +15,7 @@ public class ListaPaciente {
 
     public static Paciente buscarPorId(int id) {
         for (Paciente paciente : pacientes) {
-            if (paciente.id == id) {
+            if (paciente.getId() == id) {
                 return paciente;
             }
         }
@@ -23,7 +23,7 @@ public class ListaPaciente {
     }
 
     public static void adicionar(Paciente paciente) {
-        paciente.id = nextId++; // Atribui um ID único ao paciente
+        paciente.setId(nextId++); // Atribui um ID único ao paciente
         pacientes.add(paciente);
     }
 
